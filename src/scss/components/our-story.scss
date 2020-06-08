@@ -1,0 +1,99 @@
+.our-story{
+  &__wrapper{
+    height: 100%;
+    max-width: rem(960px);
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 35px;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-columns: 390px 550px;
+    grid-template-areas:
+    "our-story-img our-story-title"
+    "our-story-img paragraph-one"
+    "our-story-img paragraph-two"
+    "our-story-img our-story-btn";
+    @include deskfirst(1060) {
+      grid-template-columns:  1fr 1.4fr;
+      padding: 0 rem(20px);
+    }
+    @include deskfirst(490) {
+      grid-template-columns:  1fr;
+      grid-template-areas:
+      "our-story-title"
+      "paragraph-one"
+      "paragraph-two"
+      "our-story-btn";
+    }
+  }
+  &__img{
+    grid-area: our-story-img;
+    align-self: center;
+    justify-self: center;
+    @include deskfirst(770) {
+      width: 70%;
+    }
+    @include deskfirst(640) {
+      width: 50%;
+    }
+    @include deskfirst(490) {
+      display: none;
+    }
+  }
+  &__title{
+    align-self: flex-end;
+    grid-area: our-story-title;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: rem(22px);
+    letter-spacing: rem(1px);
+    @include deskfirst(640){
+      font-size: rem(22px);
+    }
+    @include deskfirst(490){
+      font-size: rem(18px);
+      justify-self: center;
+    }
+    @include deskfirst(370){
+      font-size: rem(16px);
+    }
+    @include deskfirst(330){
+      font-size: rem(14px);
+    }
+  }
+  &__text{
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    color: var(--fourthColor);
+    @include deskfirst(490){
+      font-size: rem(12px);
+      line-height: rem(22px);
+      text-align: center;
+    }
+    @include deskfirst(330){
+      font-size: rem(12px);
+    }
+  }
+  &__btn{
+    align-self: flex-start;
+    grid-area: our-story-btn;
+    color: var(--thirdColor);
+    &:hover{
+      color: var(--secondColor);
+    }
+    @include deskfirst(490){
+      justify-self: center;
+    }
+  }
+}
+
+.paragrapg-one{
+  align-self: center;
+  grid-area: paragraph-one;
+}
+.paragrapg-two{
+  align-self: center;
+  grid-area: paragraph-two;
+}

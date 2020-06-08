@@ -1,0 +1,93 @@
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+body{
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.22rem;
+  line-height: 1.7;
+}
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+svg{
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+hr{
+  width: rem(50px);
+}
+
+.btn{
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--thirdColor);
+  border-radius: 2px;
+  width: rem(120px);
+  color: var(--secondColor);
+  font-family: 'Hammersmith One', Helvetica, Arial, sans-serif;
+  font-size: rem(16px);
+  line-height: rem(38px);
+  margin-bottom: rem(70px);
+  cursor: pointer;
+  transition: all .3s linear;
+  &:hover {
+    background-color: var(--thirdColor);
+  }
+  @include deskfirst(640){
+    font-size: rem(14px);
+  }
+  @include deskfirst(490){
+    font-size: rem(12px);
+    width: rem(100px);
+  }
+}
+
+form{
+  max-width: rem(460px);
+  width: 100%;
+}
+input, textarea{
+  width: 100%;
+  &:focus, &:hover{
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+  }
+  &::-webkit-input-placeholder{
+    color: var(--sixthColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+  &::-moz-input-placeholder{
+    color: var(--sixthColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+  &::-moz-input-placeholder {
+    color: var(--sixthColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+  &::-ms-input-placeholder {
+    color: var(--sixthColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  }
+}

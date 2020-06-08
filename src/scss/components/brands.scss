@@ -1,0 +1,95 @@
+.brands {
+  grid-area: brands;
+  max-width: rem(380px);
+  width: 100%;
+  justify-content: space-between;
+  display: grid;
+  grid-template-areas: "zara mango" "barneys-newyork gucci" "calvin-klein nike" "converse puma" "levis billa-bong";
+  @include deskfirst(1060) {
+    justify-self: center;
+  }
+  @include deskfirst(770) {
+    justify-content: space-around;
+  }
+  @include deskfirst(640) {
+    margin-bottom: rem(40px);
+  }
+  &__img {
+    @include deskfirst(770) {
+      width: 75%;
+    }
+    @include deskfirst(640) {
+      padding: rem(10px);
+    }
+  }
+}
+.zara {
+  grid-area: zara;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.mango {
+  grid-area: mango;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.barneys-newyork {
+  grid-area: barneys-newyork;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.gucci {
+  grid-area: gucci;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.calvin-klein {
+  grid-area: calvin-klein;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.nike {
+  grid-area: nike;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.converse {
+  grid-area: converse;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.puma {
+  grid-area: puma;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.levis {
+  grid-area: levis;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}
+.billa-bong {
+  grid-area: billa-bong;
+  @include deskfirst(640) {
+    align-self: center;
+    justify-self: center;
+  }
+}

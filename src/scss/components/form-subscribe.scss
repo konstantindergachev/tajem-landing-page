@@ -1,0 +1,64 @@
+.subscribe__form {
+  z-index: 2;
+  color: var(--secondColor);
+  grid-area: f-subscribe;
+  align-self: flex-end;
+  display: flex;
+  @include deskfirst(1060){
+    align-self: center;
+    justify-self: center;
+    justify-content: space-around;
+  }
+}
+.subscribe__input {
+  background-color: transparent;
+  border: 1px solid var(--thirdColor);
+  border-radius: 2px;
+  max-width: rem(210px);
+  width: 100%;
+  padding-left: rem(15px);
+  @include deskfirst(1060){
+    max-width: rem(380px);
+  }
+  &::-webkit-input-placeholder{
+    color: var(--secondColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    letter-spacing: rem(1px);
+    line-height: rem(26px);
+  }
+  &::-moz-input-placeholder{
+    color: var(--secondColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    letter-spacing: rem(1px);
+    line-height: rem(26px);
+  }
+  &::-moz-input-placeholder {
+    color: var(--secondColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    letter-spacing: rem(1px);
+    line-height: rem(26px);
+  }
+  &::-ms-input-placeholder {
+    color: var(--secondColor);
+    font-size: rem(14px);
+    font-weight: 300;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    letter-spacing: rem(1px);
+    line-height: rem(26px);
+  }
+}
+.subscribe__btn{
+  max-width: rem(70px);
+  width: 100%;
+  height: 45px;
+  background-color: rgba(#fff, 0.5);
+  border: none;
+  border: 1px solid var(--secondColor);
+  cursor: pointer;
+}

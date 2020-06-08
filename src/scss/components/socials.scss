@@ -1,0 +1,42 @@
+.social {
+  z-index: 2;
+  grid-area: f-social;
+  align-self: flex-end;
+  @include deskfirst(1060) {
+    align-self: center;
+    justify-self: center;
+  }
+  @include deskfirst(640) {
+    margin-top: rem(20px);
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    width: 100%;
+    padding: rem(7px);
+    border-radius: 50%;
+    border: 1px solid var(--secondColor);
+    transition: all 0.3s linear;
+    &:hover {
+      border-radius: 50%;
+      border: 1px solid var(--secondColor);
+      background-color: var(--secondColor);
+      & .social__svg {
+        fill: var(--mainColor);
+      }
+    }
+    &:not(:last-child) {
+      margin-right: rem(8px);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__svg {
+    width: 24px;
+    height: 24px;
+  }
+}

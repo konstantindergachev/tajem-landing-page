@@ -1,0 +1,18 @@
+/*---------- 'myFadeIn' ----------*/
+@keyframes myFadeIn {
+    0% {
+        left: rem(-182px);
+    }
+    100% {
+        left: rem(0px);
+    }
+}
+/*---------- 'myFadeOut' ----------*/
+@keyframes myFadeOut {
+    0% {
+        left: rem(0px);
+    }
+    100% {
+        left: rem(-300px);
+    }
+}

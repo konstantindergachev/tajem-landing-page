@@ -1,0 +1,26 @@
+.logo{
+  grid-area: f-logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  &__img{
+    margin-right: rem(10px);
+    @include deskfirst(770) {
+      margin-right: 0;
+    }
+    @include deskfirst(490) {
+      width: 34px;
+      height: 34px;
+    }
+  }
+  &__text{
+    color: var(--thirdColor);
+    font-family: inherit;
+    font-weight: 100;
+    font-size: rem(30px);
+    @include deskfirst(490){
+      display: none;
+    }
+  }
+}

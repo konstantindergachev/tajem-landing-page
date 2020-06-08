@@ -1,0 +1,41 @@
+.btn__top {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  top: 90%;
+  right: 2%;
+  background-color: var(--mainColor);
+  border-radius: 50%;
+  z-index: 10000;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: var(--secondColor);
+    .btn__top-link {
+      color: var(--mainColor);
+    }
+  }
+}
+
+.btn__top-link {
+  color: var(--secondColor);
+  text-decoration: none;
+}
+
+[tooltip]:hover::after {
+  content: 'up';
+  position: absolute;
+  left: -20%;
+  top: 110%;
+  padding: rem(10px) rem(8px);
+  color: var(--secondColor);
+  white-space: nowrap;
+  border-radius: 5px;
+  background-color: #403167;
+}
+
+.hidden {
+  opacity: 0;
+}

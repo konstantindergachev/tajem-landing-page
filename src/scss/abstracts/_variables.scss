@@ -1,0 +1,29 @@
+:root {
+  --header-height: 70px;
+
+  --mainColor: #403167;
+  --secondColor: #ffffff;
+  --thirdColor: #00e0d0;
+  --fourthColor: #413d4b;
+  --fifthColor: #bab9bc;
+  --sixthColor: #e5e5e5;
+
+
+
+  --mainOppacity: 0.85;
+  --secondOppacity: rgba(#ffffff, 0.5);
+  --box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  --box-shadow-hover: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  --easing: cubic-bezier(.6, .05, .28, .91);
+}
+
+%clearfix {
+  &:after,
+  &:before {
+      content: "";
+      display: block;
+  }
+  &:after {
+      clear: both;
+  }
+}

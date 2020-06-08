@@ -1,0 +1,77 @@
+.sandwich__nav {
+  display: none;
+  @include deskfirst(770) {
+    display: block;
+    width: 40px;
+    transition: left 0.5s var(--easing);
+    z-index: 1000;
+    cursor: pointer;
+    position: absolute;
+    top: rem(20px);
+    right: rem(110px);
+  }
+  @include deskfirst(640) {
+    width: 30px;
+  }
+  @include deskfirst(490) {
+    width: 25px;
+    right: rem(75px);
+  }
+  .top,
+  .middle,
+  .bottom {
+    @include deskfirst(770) {
+      height: 3px;
+      background: var(--secondColor);
+      transition: transform .3s var(--easing), opacity .3s;
+    }
+  }
+  .top,
+  .middle {
+    margin-bottom: 6px;
+  }
+}
+
+.sandwich__nav.sandwich__active {
+  @include deskfirst(770) {
+    .top {
+      transform: translateY(14px) rotate(-135deg);
+    }
+    .middle {
+      opacity: 0;
+    }
+    .bottom {
+      transform: translateY(-14px) rotate(-45deg);
+    }
+  }
+  @include deskfirst(640) {
+    .top {
+      transform: translateY(4.5px) rotate(-130deg);
+    }
+  }
+  @include deskfirst(490) {
+    top: rem(30px);
+  }
+}
+.list__active {
+  position: absolute;
+  top: rem(16px);
+  right: rem(110px);
+  opacity: 1;
+  visibility: visible;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #544776;
+  border: 1px solid var(--secondColor);
+  padding: rem(10px) rem(30px);
+  z-index: 1000;
+  @include deskfirst(490) {
+    right: rem(70px);
+  }
+}
+.item__active {
+  &:hover {
+    color: var(--secondColor);
+    transition: all 0.3s linear;
+  }
+}

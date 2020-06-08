@@ -1,0 +1,59 @@
+.client{
+  &__wrapper{
+    max-width: rem(960px);
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: rem(70px) 0;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+    "client-title-left client-title-right"
+    "form brands";
+    @include deskfirst(640){
+      padding: rem(40px) 0;
+      justify-content: center;
+      grid-template-areas:
+      "client-title-left"
+      "client-title-right"
+      "brands"
+      "form";
+    }
+  }
+  &__title{
+    color: var(--fourthColor);
+    text-transform: uppercase;
+    font-size: rem(22px);
+    font-family: 'PlayfairDisplay', serif;
+    font-weight: 700;
+    letter-spacing: rem(1px);
+    line-height: rem(22px);
+    margin-bottom: rem(35px);
+    @include deskfirst(1060){
+      justify-self: center;
+    }
+    @include deskfirst(640){
+      font-size: rem(22px);
+      margin-bottom: 0;
+    }
+    @include deskfirst(490){
+      font-size: rem(18px);
+      justify-self: center;
+    }
+    @include deskfirst(370){
+      font-size: rem(16px);
+    }
+    @include deskfirst(330){
+      font-size: rem(14px);
+    }
+    &-left{
+      grid-area: client-title-left;
+    }
+    &-right{
+      grid-area: client-title-right;
+      @include deskfirst(640){
+        margin-bottom: rem(40px);
+      }
+    }
+  }
+}
